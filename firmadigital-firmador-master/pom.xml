@@ -1,0 +1,116 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>ec.gob.firmadigital</groupId>
+    <artifactId>firmador</artifactId>
+    <version>2.5.0-BETA-3</version>
+    <packaging>jar</packaging>
+
+    <name>firmadigital-firmador</name>
+    <description>Firmador</description>
+    <url>https://www.firmadigital.gob.ec</url>
+    <licenses>
+        <license>
+            <name>GNU General Public License, Version 3</name>
+            <url>https://www.gnu.org/licenses/gpl-3.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Ricardo Arguello</name>
+            <email>ricardo.arguello@soportelibre.com</email>
+            <organization>Soporte Libre</organization>
+            <organizationUrl>http://www.soportelibre.com</organizationUrl>
+        </developer>
+        <developer>
+            <name>Juan Diego Calle</name>
+            <email>juandiego.calle@soportelibre.com</email>
+            <organization>Soporte Libre</organization>
+            <organizationUrl>http://www.soportelibre.com</organizationUrl>
+        </developer>
+        <developer>
+            <name>Misael Fernández Correa</name>
+            <email>misael.fernandez@mintel.gob.ec</email>
+            <organization>Ministerio de Telecomunicaciones y de la Sociedad de la Información</organization>
+            <organizationUrl>https://www.telecomunicaciones.gob.ec</organizationUrl>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:https://minka.gob.ec/mintel/ge/firmaec/firmadigital-firmador.git</connection>
+        <developerConnection>scm:git:git@minka.gob.ec:mintel/ge/firmaec/firmadigital-firmador.git</developerConnection>
+        <url>https://minka.gob.ec/mintel/ge/firmaec/firmadigital-firmador</url>
+        <tag>v2.2.0</tag>
+    </scm>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <mainClass>ec.gob.firmadigital.firmador.Main</mainClass>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.rubrica</groupId>
+            <artifactId>rubrica</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>        
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>pdfbox</artifactId>
+            <version>2.0.16</version>
+        </dependency>
+        <dependency>
+            <groupId>com.twelvemonkeys.imageio</groupId>
+            <artifactId>imageio-jpeg</artifactId>
+            <version>3.4.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.twelvemonkeys.imageio</groupId>
+            <artifactId>imageio-tiff</artifactId>
+            <version>3.4.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.26</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>${mainClass}</mainClass>
+                        </manifest>
+                    </archive>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

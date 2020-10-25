@@ -1,0 +1,7 @@
+image: maven:3-jdk-8
+
+build:
+  script: "mvn install -B"
+
+variables:
+  GIT_SSL_NO_VERIFY: "true"

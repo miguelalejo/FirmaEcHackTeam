@@ -1,0 +1,83 @@
+= FirmaEC: Firmador
+
+== Introducción
+_FirmaEC Firmador_ es una aplicación Java que permite firmar digitalmente documentos en varios formatos.
+Soporta Portable Document Format (PDF), Microsoft OfficeOpen XML (OOXML) y OpenDocument Format (ODF).
+También permite verificar documentos.
+
+== Prerequisitos
+Los siguientes pasos le permitirán obtener una copia del proyecto para correrla en la máquina local para propósitos de desarrollo y pruebas.
+
+Se necesita instalar los siguientes prerequisitos:
+
+=== Java 8
+Se necesita instalar _Java Development Kit (JDK) 8_ para compilar y correr la aplicación.
+
+En _Microsoft Windows_ se debe descargar desde la página http://www.oracle.com/technetwork/java/javase/downloads/[Java SE Downloads].
+
+En _Fedora_ se debe instalar el paquete `java-1.8.0-openjdk-devel`:
+
+[source,bash]
+----
+$ sudo dnf install java-1.8.0-openjdk-devel
+----
+
+En _Ubuntu_ se debe instalar el paquete `openjdk-8-jdk`:
+
+[source,bash]
+----
+$ sudo apt-get install openjdk-8-jdk
+----
+
+=== NetBeans
+Se utilizó NetBeans como entorno de desarrollo.
+Descargar de http://netbeans.org[netbeans.org].
+
+=== Maven
+Para compilar y empaquetar se utiliza http://maven.apache.org[Apache Maven].
+
+En _Microsoft Windows_ se debe descargar e instalar siguiendo las instrucciones de instalación de https://maven.apache.org/install.html[Apache Maven].
+
+En _Fedora_ se debe instalar el paquete  `maven`:
+
+[source,bash]
+----
+$ sudo dnf install maven
+----
+
+En _Ubuntu_ se debe instalar el paquete `maven`:
+
+[source,bash]
+----
+$ sudo apt-get install maven
+----
+
+== Compilar y empaquetar
+Para empaquetar en un solo JAR todas las dependencias:
+
+[source,bash]
+----
+$ mvn clean package
+----
+
+Esto produce un JAR que incluye todas las dependencias en `target/firmador-jar-with-dependencies.jar`.
+
+== Dependencias
+Esta aplicación utiliza la librería http://rubrica.io[Rubrica] para realizar las operaciones de firma digital.
+
+== Licencia
+Esta aplicación se distribuye con una licencia https://www.gnu.org/licenses/gpl.html[GPLv3].
+
+== Colaborar
+Para colaborar se puede enviar un _Merge Request_ utilizando la plataforma https://minka.gob.ec[Minka].
+
+== Versiones
+Usamos http://semver.org[SemVer] para versionar.
+
+== Autores
+* Juan Diego Calle, Desarrollo - http://www.soportelibre.com[Soporte Libre]
+* Ricardo Arguello, Desarrollo - http://www.soportelibre.com[Soporte Libre]
+* Misael Fernández, Desarrollo - misael.fernandez.correa@gmail.com
+
+== Licencia
+Este proyecto está licenciado bajo la licencia GPLv3.
