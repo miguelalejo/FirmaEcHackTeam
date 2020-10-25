@@ -14,7 +14,25 @@ Videos Explicativos
 
   - HTVideo-WorExcel.mp4
   - Video-HSM.mp4
+  - VideoPlugin-Office.mov
   
+Modulos
+
+firmadigital-firmador-master - Applicacion de firma digital compilar con **mvn clean install**. Luego, ejecutar java -jar firmador-jar-with-dependencies.jar.
+
+firmadigital-libreria-master - Libreria de firma compilar con **mvn clean install**
+
+servidor-rest-firma - Servicio para conectarse con el plug in de firma digital compilar con **mvn clean install**. Luego, ejecutar java -jar firmador-jar-with-dependencies.jar.
+
+  - Se puede verificar el servicio en el URL: https://localhost:8443/servicio-firma/saludo
+
+htec-word-sign-add-in - Instalar node js compilar segun las intruccion del video VideoPlugin-Office.mov
+
+## Iniciar el Add-in
+
+Ejecutar el comando `npm run start:add-in` 
+Para detener ejecute el comando `npm run stop:add-in`
+
 
 Ejemplo Resultado
 
