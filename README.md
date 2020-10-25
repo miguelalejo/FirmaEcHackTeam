@@ -10,31 +10,33 @@ Se presenta las soluciones para:
   - Asegurar el almacenamiento de las firmas
   - Usabilidad del software de firmado
 
-Videos Explicativos
+## Videos Explicativos
 
   - HTVideo-WorExcel.mp4
   - Video-HSM.mp4
   - Videoplugin-Office.m4v
   
-Modulos
+## Modulos
 
 firmadigital-firmador-master - Applicacion de firma digital compilar con **mvn clean install**. Luego, ejecutar java -jar firmador-jar-with-dependencies.jar.
 
 firmadigital-libreria-master - Libreria de firma compilar con **mvn clean install**
 
-servidor-rest-firma - Servicio para conectarse con el plug in de firma digital compilar con **mvn clean install**. Luego, ejecutar java -jar firmador-jar-with-dependencies.jar.
+servidor-rest-firma - Esta hecho con Springboot. Servicio para conectarse con el plug in de firma digital compilar con **mvn clean install**. Luego, ejecutar java -jar java -jar prueba-0.0.1-SNAPSHOT.jar.
 
   - Se puede verificar el servicio en el URL: https://localhost:8443/servicio-firma/saludo
 
-htec-word-sign-add-in - Instalar node js compilar segun las intruccion del video VideoPlugin-Office.mov
+htec-word-sign-add-in - Plugin para Office. Instalar node js compilar segun las intruccion del video VideoPlugin-Office.mov. Y firmar segun el ejemplo.
 
-## Iniciar el Add-in
+**Iniciar el Add-in**
 
 Ejecutar el comando `npm run start:add-in` 
 Para detener ejecute el comando `npm run stop:add-in`
 
 
-Ejemplo Resultado
+## Ejemplo Resultado
 
   - prueba-signed.docx
   - prueba-signed.xlsx
+  - cp850-signed.xml
+  
